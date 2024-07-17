@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Telegram Web App Example',
-      theme: TelegramThemeUtil.getTheme(TelegramWebApp.instance),
+      // theme: TelegramThemeUtil.getTheme(TelegramWebApp.instance),
       home: const MainScreen(),
     );
   }

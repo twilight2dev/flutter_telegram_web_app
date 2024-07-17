@@ -43,7 +43,7 @@ part 'src/flutter/models/theme_params.dart';
 part 'src/flutter/models/web_app_chat.dart';
 part 'src/flutter/models/web_app_init_data.dart';
 part 'src/flutter/models/web_app_user.dart';
-part 'src/flutter/util/theme_util.dart';
+// part 'src/flutter/util/theme_util.dart';
 part 'src/telegram_app.dart';
 part 'src/web_apps/telegram_web_app_fake.dart';
 part 'src/web_apps/telegram_web_app_impl.dart';
