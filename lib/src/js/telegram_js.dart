@@ -55,3 +55,4 @@ external void onEvent(String eventType, callback);
 external void offEvent(String eventType, callback);
 external Future<void> enableVerticalSwipes();
 external Future<void> disableVerticalSwipes();
+external Future<void> shareToStory(String mediaUrl);

@@ -176,4 +176,7 @@ class TelegramWebAppImpl extends TelegramWebApp {
 
   @override
   Future<void> disableVerticalSwipes() => telegram_js.disableVerticalSwipes();
+
+  @override
+  Future<void> shareToStory(String mediaUrl) => telegram_js.shareToStory(mediaUrl);
 }

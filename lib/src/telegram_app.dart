@@ -213,4 +213,7 @@ abstract class TelegramWebApp {
   /// Bot API 7.7+ A method that disables vertical swipes to close or minimize the Mini App. This method is useful
   /// if your Mini App uses swipe gestures that may conflict with the gestures for minimizing and closing the app.
   Future<void> disableVerticalSwipes();
+
+  /// Bot API 7.8+ A method that opens the native story editor with the media specified in the media_url parameter as an HTTPS URL
+  Future<void> shareToStory(String mediaUrl);
 }
