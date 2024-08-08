@@ -215,5 +215,5 @@ abstract class TelegramWebApp {
   Future<void> disableVerticalSwipes();
 
   /// Bot API 7.8+ A method that opens the native story editor with the media specified in the media_url parameter as an HTTPS URL
-  Future<void> shareToStory(String mediaUrl);
+  Future<void> shareToStory(String mediaUrl, String? caption);
 }

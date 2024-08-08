@@ -92,17 +92,16 @@ class TelegramWebAppImpl extends TelegramWebApp {
       telegram_js.switchInlineQuery(query, chatType?.chatType);
 
   @override
-  Future<void> openLink(String url, {bool tryInstantView = true}) => telegram_js.openLink(
-      url, telegram_js_models.OpenLinkParams(try_instant_view: tryInstantView));
+  Future<void> openLink(String url, {bool tryInstantView = true}) =>
+      telegram_js.openLink(url, telegram_js_models.OpenLinkParams(try_instant_view: tryInstantView));
 
   @override
   Future<void> openTelegramLink(String url) => telegram_js.openTelegramLink(url);
 
   @override
-  Future<void> openInvoice(String url, [Function(dynamic)? onInvoiceStatus]) =>
-      onInvoiceStatus != null
-          ? telegram_js.openInvoice(url, JsDynamicCallback(onInvoiceStatus))
-          : telegram_js.openInvoice(url);
+  Future<void> openInvoice(String url, [Function(dynamic)? onInvoiceStatus]) => onInvoiceStatus != null
+      ? telegram_js.openInvoice(url, JsDynamicCallback(onInvoiceStatus))
+      : telegram_js.openInvoice(url);
 
   @override
   Future<void> showPopup({
@@ -125,22 +124,18 @@ class TelegramWebAppImpl extends TelegramWebApp {
   }
 
   @override
-  Future<void> showAlert(String message, [Function()? callback]) => callback != null
-      ? telegram_js.showAlert(message, JsDynamicCallback(callback))
-      : telegram_js.showAlert(message);
+  Future<void> showAlert(String message, [Function()? callback]) =>
+      callback != null ? telegram_js.showAlert(message, JsDynamicCallback(callback)) : telegram_js.showAlert(message);
 
   @override
-  Future<void> showConfirm(String message, [void Function(bool isOkPressed)? callback]) =>
-      callback != null
-          ? telegram_js.showConfirm(message, JsDynamicCallback(callback))
-          : telegram_js.showConfirm(message);
+  Future<void> showConfirm(String message, [void Function(bool isOkPressed)? callback]) => callback != null
+      ? telegram_js.showConfirm(message, JsDynamicCallback(callback))
+      : telegram_js.showConfirm(message);
 
   @override
-  Future<void> showScanQrPopup(String? infoTitle, [bool Function(String result)? callback]) =>
-      callback != null
-          ? telegram_js.showScanQrPopup(
-              telegram_js_models.ScanQrPopupParams(text: infoTitle), JsDynamicCallback(callback))
-          : telegram_js.showScanQrPopup(telegram_js_models.ScanQrPopupParams(text: infoTitle));
+  Future<void> showScanQrPopup(String? infoTitle, [bool Function(String result)? callback]) => callback != null
+      ? telegram_js.showScanQrPopup(telegram_js_models.ScanQrPopupParams(text: infoTitle), JsDynamicCallback(callback))
+      : telegram_js.showScanQrPopup(telegram_js_models.ScanQrPopupParams(text: infoTitle));
 
   @override
   Future<void> closeScanQrPopup() => telegram_js.closeScanQrPopup();
@@ -155,9 +150,8 @@ class TelegramWebAppImpl extends TelegramWebApp {
       telegram_js.requestWriteAccess(JsDynamicCallback(onResult));
 
   @override
-  Future<void> requestContact([Function(bool granted)? onResult]) => onResult != null
-      ? telegram_js.requestContact(JsDynamicCallback(onResult))
-      : telegram_js.requestContact();
+  Future<void> requestContact([Function(bool granted)? onResult]) =>
+      onResult != null ? telegram_js.requestContact(JsDynamicCallback(onResult)) : telegram_js.requestContact();
 
   @override
   Future<void> ready() => telegram_js.ready();
@@ -178,5 +172,6 @@ class TelegramWebAppImpl extends TelegramWebApp {
   Future<void> disableVerticalSwipes() => telegram_js.disableVerticalSwipes();
 
   @override
-  Future<void> shareToStory(String mediaUrl) => telegram_js.shareToStory(mediaUrl);
+  Future<void> shareToStory(String mediaUrl, String? caption) =>
+      telegram_js.shareToStory(mediaUrl, telegram_js_models.ShareStoryParams(text: caption ?? ""));
 }

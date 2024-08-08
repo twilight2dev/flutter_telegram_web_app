@@ -139,5 +139,5 @@ class TelegramWebAppFake extends TelegramWebApp {
   bool get isVerticalSwipesEnabled => true;
 
   @override
-  Future<void> shareToStory(String mediaUrl) async {}
+  Future<void> shareToStory(String mediaUrl, String? caption) async {}
 }
